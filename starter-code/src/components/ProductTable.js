@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 // import '../../App.css';
 import './productTable.css';
-import allTheData from '../data.json'
+// import allTheData from '../data.json'
 import ProductRow from './ProductRow';
 
 class ProductTable extends Component {
     constructor(props){
       super(props)
       this.state = {
-        products : this.props.products.allTheData
+        products : this.props.dataholder
         // allTheData: allTheData,
         // visibleData : allTheData,
         
@@ -20,7 +20,7 @@ class ProductTable extends Component {
         return <ProductRow 
             key={i}
             // productName = {eachProduct.name}
-            productPrice = {eachProduct.price}
+            eachProduct = {eachProduct}
         />
         })
     }

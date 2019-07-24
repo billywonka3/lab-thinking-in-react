@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import '../../App.css';
 import './filterableProductTable.css';
 
 import Search from './Search';
 import ProductTable from './ProductTable';
 
-function FilterableProductTable(props){
+class FilterableProductTable extends Component {
+
+    
+    render() {
     return(
 
         <div className="filterable">
@@ -19,6 +22,7 @@ function FilterableProductTable(props){
         </div>
        
     )
+    }
 }
     
 export default FilterableProductTable;

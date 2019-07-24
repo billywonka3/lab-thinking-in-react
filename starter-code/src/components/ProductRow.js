@@ -6,7 +6,7 @@ import './productRow.css';
 function ProductRow(props){
     return(
         <div className="row">
-             <p> {props.name} </p>   <p> {props.price} </p>
+             <p> {props.eachProduct.name} </p>   <p> {props.eachProduct.price} </p>
         </div>
     )
 }
