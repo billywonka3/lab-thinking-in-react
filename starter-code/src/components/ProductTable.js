@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
 // import '../../App.css';
 import './productTable.css';
-// import allTheData from '../data.json'
+import allTheData from '../data.json'
 import ProductRow from './ProductRow';
 
 class ProductTable extends Component {
     constructor(props){
       super(props)
       this.state = {
-        products : this.props.dataholder
-        // allTheData: allTheData,
-        // visibleData : allTheData,
+        allTheData: allTheData,
+        visibleData : allTheData,
         
       }
     }
 
     displayAllProducts = () => {
-        return this.state.products.map((eachProduct, i)=>{
+        return this.state.visibleData.map((eachProduct, i)=>{
         return <ProductRow 
             key={i}
-            // productName = {eachProduct.name}
-            eachProduct = {eachProduct}
+            productName = {eachProduct.name}
+            productPrice = {eachProduct.price}
         />
         })
     }
@@ -33,8 +32,8 @@ class ProductTable extends Component {
                     <b> Name </b>   <b> Price </b>
                 </div>
 
+                    {/* <ProductRow  products = {this.props.products}/> */}
                     {this.displayAllProducts()}
-                    
 
             </div>
 
